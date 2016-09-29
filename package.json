@@ -1,0 +1,23 @@
+{
+  "name": "travelling",
+  "version": "1.0.0",
+  "description": "this will help you to plan the travelling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leninveluru/Travelling.git"
+  },
+  "author": "leninveluru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leninveluru/Travelling/issues"
+  },
+  "homepage": "https://github.com/Leninveluru/Travelling#readme",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "express": "^4.14.0"
+  }
+}
