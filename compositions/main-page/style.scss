@@ -1,0 +1,40 @@
+body {
+  /*background-image: url('../images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;*/
+  background-color: #deb887;
+}
+
+.travel-container {
+
+  .header {
+    text-align: center;
+    color: #f5deb3;
+  }
+
+  .tabs {
+    background-color: transparent;
+  }
+
+  .first-form, .second-form {
+    margin-top: 20px;
+  }
+
+  * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+}
