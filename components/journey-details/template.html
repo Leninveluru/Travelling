@@ -1,0 +1,71 @@
+<div>
+  <div class="col-sm-5 carousel-caption form-body ">
+    <form name="form" role="form" class="form-horizontal contract-form">
+      <div>
+        <h3>Journey Details</h3>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">From:</label>
+        <div class="col-sm-7">
+          <select class="form-control" ng-model="user.travel.from" required >
+            <option>Bangalore</option>
+            <option>Chennai</option>
+            <option>Delhi</option>
+            <option>Hyderabad</option>
+            <option>Kolkata</option>
+            <option>Mumbai</option>
+            <option>pune</option>
+          </select>
+        </div>
+
+      </div><br>
+
+      <div class="form-group">
+        <label class="col-sm-3 control-label">To:</label>
+        <div class="col-sm-7">
+          <select class="form-control" ng-model="user.travel.to" required>
+            <option>Bangalore</option>
+            <option>Chennai</option>
+            <option>Delhi</option>
+            <option>Hyderabad</option>
+            <option>Kolkata</option>
+            <option>Mumbai</option>
+            <option>pune</option>
+          </select>
+        </div>
+
+      </div><br>
+
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Departure Date:</label>
+        <div class="col-sm-7">
+        <p class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup ng-model="user.travel.departureDate" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Return Date:</label>
+        <div class="col-sm-7">
+        <p class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup ng-model="user.travel.returnDate" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-6 pull-right">
+          <input type="submit" value="Next" class="btn btn-warning" ng-click="onNextClick()"/>
+        </div>
+        <div class="col-xs-1"></div>
+      </div><br>
+    </form>
+  </div>
+</div>

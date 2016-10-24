@@ -1,0 +1,28 @@
+<div class="card row header">
+	<h1>Travel Information</h1>
+	<div class="col-md-12">
+		<div class=" col-md-12">
+			<h3>
+				<span>{{mailContent[1].frstName}}</span>
+				<span> {{mailContent[1].lastName}}</span>
+				<span> will depart for {{mailContent[0].departureDate}} </span>
+				 and return on
+				<span> {{mailContent[0].returnDate}}</span>
+			</h3>
+		</div>
+		<button value="submit" ng-click="onSubmit()" class="btn btn-success">
+			Send Email
+		</button>
+	</div>
+
+</div>
+
+
+
+
+<!-- <div class="conformation-form">
+    <div class="col-sm-5 carousel-caption form-body">
+        <h3>Travel Information</h3>
+        <button class="btn btn-primary" ng-click="onSubmit(user)">Submit</button>
+    </div>
+</div> -->

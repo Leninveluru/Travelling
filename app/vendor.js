@@ -1,6 +1,3 @@
-/**
- * Created by mathusersd on 10/13/2016.
- */
 require('babel-polyfill');
 require('angular');
 require('angular-ui-router');
