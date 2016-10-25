@@ -9,7 +9,6 @@ function personDetailsController($scope, dataService) {
 	}
 }
 
-
 export default {
 	template: template,
 	controller: personDetailsController

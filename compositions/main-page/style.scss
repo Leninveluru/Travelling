@@ -2,55 +2,50 @@ body {
   background-color: #95bad6;
 }
 
-.tab-disable {
-  pointer-events: none;
-}
-
-div.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 0 10px 0;
-  background-image: url('./flight.jpg');
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size:cover;
-}
-
-div.header {
-  color: white;
-  padding: 10px;
-  font-size: 40px;
-}
-
-.responsive-width {
-  font-size: 1vw;
-  white-space: normal;
-}
-
-* {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-img {
-  user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
 
 .travel-container {
+
+  * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
+  .tab-disable {
+    pointer-events: none;
+  }
+
+  div.board {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 0 10px 0;
+    background-image: url('./flight.jpg');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+  }
+
+  form.tab-form-demo .tab-pane {
+    margin: 20px 20px;
+  }
+
   .header {
     text-align: center;
     color: #f5deb3;
   }
-
+  
 }
