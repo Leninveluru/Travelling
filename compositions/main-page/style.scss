@@ -1,9 +1,35 @@
+html,
 body {
-  background-color: #95bad6;
+  max-height: 100%;
+  height: 100%;
+  user-select: none;
 }
+
+body {
+  background: #f4f4f2;
+  font-family: 'aventura', 'Droid Sans', sans-serif;
+  *zoom: 1; 
+}
+
+body {
+  /*background-color: #95bad6;*/
+  background-image: url('./travel.jpg');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+}
+
+h1{
+ text-align: center;
+} 
 
 
 .travel-container {
+  /*font-size: 1.2vw;*/
+
+  .tab-form-demo{
+    background-color: wheat;
+  }
 
   * {
     -webkit-touch-callout: none;
@@ -26,26 +52,10 @@ body {
     pointer-events: none;
   }
 
-  div.board {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px 0 10px 0;
-    background-image: url('./flight.jpg');
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:cover;
-  }
-
-  form.tab-form-demo .tab-pane {
-    margin: 20px 20px;
-  }
-
   .header {
     text-align: center;
     color: #f5deb3;
+    font-family: initial;
   }
   
 }

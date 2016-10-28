@@ -29,7 +29,7 @@ app.get('/postEmail',function(req,res){
     ' will depart on '+ req.query.startdt +
     ' and return on '+  req.query.returndt +
     'from: '+ req.query.from +
-    'to: '+ req.query.to +
+    ' to '+ req.query.to +
     ' <h3>Your Booking is confirmed</h3>'
   };
 
@@ -38,7 +38,7 @@ app.get('/postEmail',function(req,res){
     if (error) {
       return;
     }
-    console.log('Message sent successfully!');  
+    console.log('Message sent successfully!');
   });
 
   res.end('done');

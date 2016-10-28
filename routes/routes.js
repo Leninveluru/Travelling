@@ -1,3 +1,4 @@
+
 import controller from '../compositions/main-page/controller';
 import template from '../compositions/main-page/index.html';
 

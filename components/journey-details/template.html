@@ -1,92 +1,88 @@
 <div class="journey-details-container">
-  <div class="board">
-    <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
-      <div class="row">
-        <div class="col-md-6"></div>
-        <div class="col-md-2">
-          <h3>Journey Details</h3>
+  <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+    <div>
+      <h1>Journey Details</h1>
+    </div><br>
+
+    <div>
+     <!-- From location -->
+     <div class="row">
+      <div class="form-group col-xs-8 col-xs-offset-2">
+        <label style="font-size: large">From:</label>
+        <div >
+          <select class="form-control" ng-model="user.travel.from" required >
+            <option>Bangalore</option>
+            <option>Chennai</option>
+            <option>Delhi</option>
+            <option>Hyderabad</option>
+            <option>Kolkata</option>
+            <option>Mumbai</option>
+            <option>Pune</option>
+          </select>
         </div>
-        <div class="col-md-4"></div>
       </div>
+    </div><br>
 
-      <div>
-        <!--  From location -->
-        <div class="row form-group">
-          <div class="col-md-2"></div>
-          <div class="col-md-2">
-            <label class="labelText">From: </label>
-          </div>
-          <div class="col-md-6">
-            <select class="form-control" ng-model="user.travel.from" required>
-              <option>Bangalore</option>
-              <option>Chennai</option>
-              <option>Delhi</option>
-              <option>Hyderabad</option>
-              <option>Kolkata</option>
-              <option>Mumbai</option>
-              <option>Pune</option>
-            </select>
-          </div>
+    <!-- To location -->
+    <div class="row">
+      <div class="form-group col-xs-8 col-xs-offset-2">
+        <label style="font-size: large">To:</label>
+        <div>
+          <select class="form-control" ng-model="user.travel.to" required>
+            <option>Hyderabad</option>
+            <option>Chennai</option>
+            <option>Mumbai</option>
+            <option>Bangalore</option>
+            <option>Pune</option>
+            <option>Kolkata</option>
+            <option>Delhi</option>
+          </select>
         </div>
+      </div>
+    </div><br>
 
-        <!-- To location -->
-        <div class="row form-group">
-          <div class="col-md-2"></div>
-          <div class="col-md-2">
-            <label class="labelText">To: </label>
-          </div>
-          <div class="col-md-6">
-            <select class="form-control" ng-model="user.travel.to" required>
-              <option>Pune</option>
-              <option>Kolkata</option>
-              <option>Chennai</option>
-              <option>Delhi</option>
-              <option>Hyderabad</option>
-              <option>Bangalore</option>
-              <option>Mumbai</option>
-            </select>
-          </div>
+    <!-- Departure Date: -->
+    <div class="row" >
+      <div class="form-group col-xs-8 col-xs-offset-2">
+        <label style="font-size: large">Departure Date:</label><br>
+        <p class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup
+          ng-model="user.travel.departureDate" placeholder="Select the Departure Date..."
+          is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true"
+          close-text="Close" alt-input-formats="altInputFormats"/>
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open1()">
+              <i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+          </p>
         </div>
+      </div>
+      <br>
 
-        <!-- Departure Date: -->
-        <div class="row form-group">
-          <div class="col-md-2"></div>
-          <label class="col-md-2">Departure Date:</label>
-          <div class="col-sm-6">
-            <p class="input-group">
-              <input type="text" class="form-control" uib-datepicker-popup ng-model="user.travel.departureDate" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
-              <span class="input-group-btn">
-                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+      <!-- Return Date: -->
+      <div class="row">
+        <div class="form-group col-xs-8 col-xs-offset-2">
+          <label style="font-size: large">Return Date:</label><br>
+          <p class="input-group">
+            <input type="text" class="form-control" uib-datepicker-popup
+            ng-model="user.travel.returnDate" placeholder="Select the Return Date..."
+            is-open="popup2.opened"
+            datepicker-options="dateOptions" close-text="Close"/>
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default">
+                <i class="glyphicon glyphicon-calendar" ng-click="open2()"></i></button>
               </span>
             </p>
           </div>
         </div>
 
-        <!-- Return Date: -->
-        <div class="row form-group">
-          <div class="col-md-2"></div>
-          <label class="col-sm-2">Return Date:</label>
-          <div class="col-sm-6">
-            <p class="input-group">
-              <input type="text" class="form-control" uib-datepicker-popup ng-model="user.travel.returnDate" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
-              <span class="input-group-btn">
-                <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
-              </span>
-            </p>
-          </div>
-        </div>
-
-        <!-- next button -->
+        <!-- Next button -->
         <div class="row">
-          <div class="col-xs-7"></div>
-          <div class="col-xs-5 pull-right">
+          <div class="col-xs-8 col-xs-offset-2" style="text-align: center">
             <input type="submit" value="Next" class="btn btn-warning" ng-disabled="userForm.$invalid" ng-click="onNextClick()"/>
           </div>
         </div>
-
+        
       </div>
     </form>
   </div>
-</div>
-
-</div>

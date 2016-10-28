@@ -1,18 +1,19 @@
-<div class="confirmation-container">
-	<div class="board row header">
+<div class="confirmation-container" style="background-color: lavenderblush; text-align: center">
+	<div>
 		<h1>Travel Information</h1>
+	</div>
+
+	<div class="row">
 		<div class="col-md-12">
-			<div class=" col-md-12">
-				<h3>
-					<span>{{mailContent[1].frstName}}</span>
-					<span> {{mailContent[1].lastName}}</span>
-					<span> will depart for {{mailContent[0].departureDate}} </span>
-					and return on
-					<span> {{mailContent[0].returnDate}}</span>
-					<span>From {{mailContent[0].from}}</span>
-					<span>To {{mailContent[0].to}}</span>
-				</h3>
-			</div>
+			<h3>
+				<span>{{mailContent[1].frstName}}</span>
+				<span> {{mailContent[1].lastName}}</span>
+				<span> will depart for {{mailContent[0].departureDate}} </span>
+				and return on
+				<span> {{mailContent[0].returnDate}}</span>
+				<span>From {{mailContent[0].from}}</span>
+				<span>To {{mailContent[0].to}}</span>
+			</h3>
 			<button value="submit" ng-click="onSubmit()" class="btn btn-success">
 				Send Email
 			</button>

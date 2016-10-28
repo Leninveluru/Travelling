@@ -2,13 +2,16 @@ import template from './template.html';
 
 function journeyDetailsController($scope, dataService) {
 	'ngInject';
+
+  $scope.checkDate = '';
   
   $scope.onNextClick = function(){
     dataService.setData($scope.user.travel);
     $scope.$parent.$parent.tabset.active = 1;
   }
 
-  $scope.today = function() {
+
+  $scope.today = function() {    
     $scope.dt = new Date();
   }
   $scope.today();
@@ -18,6 +21,7 @@ function journeyDetailsController($scope, dataService) {
   };
 
   $scope.inlineOptions = {
+
     customClass: getDayClass,
     minDate: new Date(),
     showWeeks: true
@@ -35,7 +39,7 @@ function journeyDetailsController($scope, dataService) {
   function disabled(data) {
   	var date = data.date,
   	mode = data.mode;
-  	return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
+  	return mode === 'day' && (date.getDay() === 0 || date.getDay() === 10);
   }
 
   $scope.toggleMin = function() {
@@ -46,15 +50,31 @@ function journeyDetailsController($scope, dataService) {
   $scope.toggleMin();
 
   $scope.open1 = function() {
+    $scope.dateOptions = {
+    dateDisabled: disabled,
+    formatYear: 'yy',
+    maxDate: new Date(2020, 5, 22),
+    minDate: new Date(),
+    startingDay: 1
+  };
   	$scope.popup1.opened = true;
+    
   };
 
   $scope.open2 = function() {
+    $scope.dateOptions = {
+    dateDisabled: disabled,
+    formatYear: 'yy',
+    maxDate: new Date(2020, 5, 22),
+    minDate: new Date(),
+    startingDay: 1
+  };
   	$scope.popup2.opened = true;
   };
 
   $scope.setDate = function(year, month, day) {
   	$scope.dt = new Date(year, month, day);
+    console.log('$scope.dt',$scope.dt);
   };
 
   $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
@@ -62,6 +82,7 @@ function journeyDetailsController($scope, dataService) {
   $scope.altInputFormats = ['M!/d!/yyyy'];
 
   $scope.popup1 = {
+
   	opened: false
   };
 
@@ -83,6 +104,8 @@ function journeyDetailsController($scope, dataService) {
   	status: 'partially'
   }
   ];
+
+  console.log('$scope.events',$scope.events);
 
   function getDayClass(data) {
   	var date = data.date,

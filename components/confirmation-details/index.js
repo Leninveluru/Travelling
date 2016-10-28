@@ -7,7 +7,6 @@ function confirmationDetailsController($scope, $http, dataService) {
 
   $scope.onSubmit = function(user){
     var mailContent = $scope.mailContent;
-    console.log('mailContent',mailContent[0]);
     $http({  
       method: 'GET',
       url: 'http://localhost:5000/postEmail?email='+mailContent[1].mail+
@@ -19,6 +18,7 @@ function confirmationDetailsController($scope, $http, dataService) {
       '&from='+mailContent[0].from+
       '&to='+mailContent[0].to
     }).then(function successCallback(response) {
+      alert('eMail sent successfully!');
       console.log('response',response);
     });
   };
